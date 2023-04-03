@@ -37,7 +37,7 @@ main{
     background-color: #c9c9cb;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .griglia{
@@ -108,7 +108,7 @@ main{
     align-items: center;
     justify-content: center;
     display: none;
-    font-size: 20px;
+    font-size: 25px;
     
 }
 
@@ -116,5 +116,5 @@ main{
     align-items: center;
     justify-content: center;
     display: none;
-    font-size: 20px;
+    font-size: 25px;
 }

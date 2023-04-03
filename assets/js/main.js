@@ -9,6 +9,7 @@ restartBtn.addEventListener("click", function() {
   const win = document.getElementsByClassName("win")[0];
   lose.style.display = "none";
   win.style.display = "none";
+  document.getElementById("score").innerText = score;
   generaGriglia();
 });
 
