@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo minato</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="./assets/img/icons8-bomb-32.png">
+</head>
+<body>
+    <div class="vh-100 w-100">
+
+        <header class=" d-flex flex-column align-items-center">
+
+            <h1 class="py-2">💣 Campo minato 💣</h1>
+
+            <div>
+                <label class="me-2 fs-5 ">Difficoltà</label>
+                <select class="mx-2 p-1 fs-5" id="livello">
+                    <option value="easy">Easy</option>
+                    <option value="normal">Normal</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button class="ms-2 px-1 fs-5" id="play">Gioca</button>
+            </div>
+            
+        </header>
+
+        <main class="w-100 bg-win98 d-flex justify-content-center">
+
+            <div class="game" style="display: none;">
+
+                <div class="top">
+                    <div class="emoticon">😎</div>
+                    <div class="emoticon">🙂</div>
+                    <div class="emoticon">😵</div>
+                </div>
+
+                <div class="griglia">
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
