@@ -1,6 +1,16 @@
 const playBtn = document.getElementById("play");
+const restartBtn = document.getElementById("restart");
 
 playBtn.addEventListener("click", generaGriglia);
+restartBtn.addEventListener("click", function() {
+  gameOver = false;
+  score = 0;
+  const lose = document.getElementsByClassName("lose")[0];
+  const win = document.getElementsByClassName("win")[0];
+  lose.style.display = "none";
+  win.style.display = "none";
+  generaGriglia();
+});
 
 let score = 0;
 let gameOver = false;
@@ -53,17 +63,18 @@ function generaGriglia() {
     griglia.appendChild(box);
 
     box.addEventListener("click", function () {
-      if (gameOver){
+      if (gameOver || this.classList.contains("active")){
         return;
       }
 
       if (this.hasAttribute("data-bomba")) {
-        this.classList.add("active-bomb")
+        this.classList.add("active-bomb");
         box.innerHTML = "💣";
         const lose = document.getElementsByClassName("lose")[0];
         lose.style.display = "flex";
         gameOver = true;
-
+        restartBtn.style.display = "inline";
+        playBtn.style.display = "none";
       } else {
         this.classList.add("active");
         score++;
@@ -72,6 +83,8 @@ function generaGriglia() {
           const win = document.getElementsByClassName("win")[0];
           win.style.display = "flex";
           gameOver = true;
+          restartBtn.style.display = "inline";
+          playBtn.style.display = "none";
         }
       }
     });
