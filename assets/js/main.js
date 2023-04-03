@@ -76,6 +76,10 @@ function generaGriglia() {
         gameOver = true;
         restartBtn.style.display = "inline";
         playBtn.style.display = "none";
+        const bombe = document.querySelectorAll("[data-bomba]");
+        for (let i = 0; i < bombe.length; i++) {
+          bombe[i].innerHTML = "💣";
+        }
       } else {
         this.classList.add("active");
         score++;
