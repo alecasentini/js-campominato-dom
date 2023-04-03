@@ -91,3 +91,30 @@ main{
     border: 1px solid #808080;
     background-color: #ec0505;
 }
+
+
+#score{
+    background-color: black;
+    height: 45px;
+    width: 45px;
+    font-size: 50px;
+    color: #ec0505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.win{
+    align-items: center;
+    justify-content: center;
+    display: none;
+    font-size: 20px;
+    
+}
+
+.lose{
+    align-items: center;
+    justify-content: center;
+    display: none;
+    font-size: 20px;
+}
